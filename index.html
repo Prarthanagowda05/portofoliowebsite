@@ -1,102 +1,241 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>portofolio website</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
-</head>
-<body>
-     <header class="header">
-        <a href="#" class="logo"><span>prar</span>thana</a>
-
-     <nav class="navbar">
-        <a href="#" class="active">Portofolio</a>
-        <a href="#">Services</a>
-        <a href="#">Experience</a>
-        <a href="#">Projects</a>
-        <a href="#">Education</a>
-     </nav>
-     <a href="#" class="contact">Contact Me</a>
-    </header>
-    <section class="home">
-        <div class="home-content">
-            <h3>Hi</h3>
-
-            <h1>i am <span>Prarthana</span> a Frontend Developer</h1>
-
-            <p>Computer Science Engineering student with foundational knowledge in programming languages including Python, JavaScript,HTML,CSS,DSA and C. Committed to continuous learning and seeking opportunities to apply technical skills in real-world scenarios.Strong communicator and collaborative team member, eager to contribute to innovative projects in a dynamic environment</p>
-
-            <div class="btn-box">
-                <button class="btn-1">Hire Me</button>
-                <button class="btn-2">Experience</button>
-
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Weather App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Weather App</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About this App</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Delhi</a></li>
+                <li><a class="dropdown-item" href="#">Seattle</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Bangalore</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">Usage Guide</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input id="city"  class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit" id="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <h1 class="my-4 text-center">Weather for <span id="cityName"></span></h1>
+      <main>
+        <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+              <div class="card-header py-3">
+                <h4 class="my-0 fw-normal">Temperatures</h4>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title"><small class="text-body-secondary fw-light"></small></h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li>Time is: <span id="time"></span></li>
+                  <li>Symbol is: <span id="symbol"></span></li>
+                  <li>Symbol Phrase is: <span id="symbolPhrase"></span></li>
+                  <li>Temperature is: <span id="temperature"></span></li>
+                  <li>Feels Like Temp is: <span id="feelsLikeTemp"></span></li>
+                  <li>Rel Humidity is: <span id="relHumidity"></span></li>
+                  <li>Dew Point is: <span id="dewPoint"></span></li>
+                </ul>
+                <button type="button" class="w-100 btn btn-lg btn-outline-primary">Sign up for free</button>
+              </div>
             </div>
-        </div>
-        <div class="img-box">
-            <img src="imagee.jpg" alt="">
-        </div>
-    </section>
-    <section class="about">
-        <div class="about-img">
-            <img src="imagee.jpg" alt="">
-        </div>
-
-        <div class="about-content">
-            <h2 class="heading">About <span>Me</span></h2>
-            <h3>Frontend <span>Developer</span></h3>
-            <p>As a dedicated frontend developer, I specialize in crafting responsive and visually appealing web applications that deliver exceptional user experiences. Proficient in HTML, CSS, and JavaScript, I leverage modern frameworks such as React, Angular, and Vue.js to build dynamic interfaces that are both functional and aesthetically pleasing. My strong understanding of user-centered design principles allows me to collaborate effectively with designers and backend developers to create seamless integrations and enhance overall site performance</p>
-            <a href="#" class="btn-2">Experience</a>
-        </div>
-    </section>
-
-    <section class="contact-form">
-        <h2 class="contact -me">Contact <span>Me</span></h2>
-        <form action="#">
-            <div class="input-box">
-                <input type="text" placeholder="Full Name">
-                <input type="email" placeholder="Email">
+          </div>
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+              <div class="card-header py-3">
+                <h4 class="my-0 fw-normal">Wind info</h4>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title"><small class="text-body-secondary fw-light"></small></h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li>Wind Direction is: <span id="windDir"></span></li>
+                  <li>Wind Speed is: <span id="windSpeed"></span></li>
+                  <li>Wind Gust is: <span id="windGust"></span></li>
+                  <li>Wind Direction String is: <span id="windDirString"></span></li>
+                  <li>Precip Probability is: <span id="precipProb"></span></li>
+                  <li>Snow Rate is: <span id="snowRate"></span></li>
+                </ul>
+                <button type="button" class="w-100 btn btn-lg btn-primary">Get started</button>
+              </div>
             </div>
-
-            <div class="input-box">
-                <input type="number" placeholder="Phone Number">
-                <input type="text" placeholder="Subject">
+          </div>
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm border-primary">
+              <div class="card-header py-3 text-bg-primary border-primary">
+                <h4 class="my-0 fw-normal">Rain info</h4>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title"><small class="text-body-secondary fw-light"></small></h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li>Precip Rate is: <span id="precipRate"></span></li>
+                  <li>Thunder Prob is: <span id="thunderProb"></span></li>
+                  <li>Cloudiness is: <span id="cloudiness"></span></li>
+                  
+                </ul>
+                <button type="button" class="w-100 btn btn-lg btn-primary">Contact us</button>
+              </div>
             </div>
-            <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
-            <input type="submit" value="Send Message" class="btn-1">
-            
-        </form>
-    </section>
+          </div>
+        </div>
     
-    <footer class="footer">
-        <div class="social">
-            <a href="#"><i class='bx bxl-facebook-circle'></i></a>
-            <a href="#"><i class='bx bxl-linkedin' ></i></a>
-            <a href="#"><i class='bx bxl-twitter'></i></a>
-            <a href="#"><i class='bx bxl-instagram' ></i></a>
+        <h2 class="display-6 text-center mb-4">Weather of other common places</h2>
+    
+        <div class="table-responsive">
+          <table class="table text-center">
+            <thead>
+              <tr>
+                <th style="width: 34%;"></th>
+                <th style="width: 22%;">Cloudiness</th>
+                <th style="width: 22%;">DewPoint</th>
+                <th style="width: 22%;">FeelsLikeTemp</th>
+                <th style="width: 22%;">PrecipProb</th>
+                <th style="width: 22%;">PrecipRate</th>
+                <th style="width: 22%;">PrecipType</th>
+                <th style="width: 22%;">Pressure</th>
+                <th style="width: 22%;">RelHumidity</th>
+                <th style="width: 22%;">SnowRate</th>
+                <th style="width: 22%;">Symbol</th>
+                <th style="width: 22%;">SymbolPhrase</th>
+                <th style="width: 22%;">Temperature</th>
+                <th style="width: 22%;">ThunderProb</th>
+                <th style="width: 22%;">Time</th>
+                <th style="width: 22%;">UvIndex</th>
+                <th style="width: 22%;">WindDir</th>
+                <th style="width: 22%;">WindDirString</th>
+                <th style="width: 22%;">WindGust</th>
+                <th style="width: 22%;">WindSpeed</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row" class="text-start">Shanghai</th>
+                
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>2</td>
+                <td>5</td>
+                <td>7</td>
+                <td>2</td>
+                <td>8</td>
+                <td>9</td>
+                <td>2</td>
+                <td>1</td>
+                <td>4</td>
+                <td>6</td>
+                <td>5</td>
+                <td>7</td>
+                <td>3</td>
+                <td>2</td>
+                <td>8</td>
+                <td>0</td>
+                
+              </tr>
+              <tr>
+                <th scope="row" class="text-start">Boston</th>
+                <td>2</td>
+                <td>4</td>
+                <td>1</td>
+                <td>5</td>
+                <td>3</td>
+                <td>6</td>
+                <td>8</td>
+                <td>7</td>
+                <td>2</td>
+                <td>1</td>
+                <td>9</td>
+                <td>0</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>8</td>
+                <td>6</td>
+                <td>2</td>
+               
+                
+              </tr>
+            </tbody>
+    
+            <tbody>
+              <tr>
+                <th scope="row" class="text-start">Lucknow</th>
+                <td>5</td>
+                <td>1</td>
+                <td>3</td>
+                <td>2</td>
+                <td>5</td>
+                <td>7</td>
+                <td>9</td>
+                <td>8</td>
+                <td>2</td>
+                <td>1</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>2</td>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-start">Kolkata</th>
+                <td>2</td>
+                <td>4</td>
+                <td>5</td>
+                <td>2</td>
+                <td>7</td>
+                <td>8</td>
+                <td>2</td>
+                <td>2</td>
+                <td>3</td>
+                <td>9</td>
+                <td>0</td>
+                <td>2</td>
+                <td>2</td>
+                <td>1</td>
+                <td>5</td>
+                <td>2</td>
+                <td>7</td>
+                <td>3</td>
+                <td>1</td>
+              </tr>
+              
+            </tbody>
+          </table>
         </div>
-
-        <ul class="list">
-            <li>
-                <a href="#">FAQ</a>
-            </li>
-            <li>
-                <a href="#">Services</a>
-            </li>
-            <li>
-                <a href="#">About Me</a>
-            </li>
-            <li>
-                <a href="#">Contact</a>
-            </li>
-            <li>
-                <a href="#">Privacy Policy</a>
-            </li>
-        </ul>
-
-        <p class="copyright">O 2025 Prarthana - All Rights Reserved
-        </p>
-    </footer>
-</body>
+      </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+  </body>
 </html>
